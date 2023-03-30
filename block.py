@@ -4,7 +4,7 @@ from typing import List, Any
 
 
 class Block:
-    def __init__(self, index: int, transactions: List[Any], previous_hash: str, proof: int):
+    def __init__(self, index: int, transactions: List[Any], previous_hash: str, proof: str):
         self.index = index
         self.timestamp = time.time()
         self.transactions = transactions

@@ -8,7 +8,7 @@ from block import Block
 class Blockchain:
     def __init__(self):
         self.chain = [self.create_genesis_block()]
-        self.validators = {"Dillon": 10, "Owen": 15, "Austin": 25, "Jennifer": 50}
+        self.validators = {"Dillon": 1000, "Owen": 150, "Austin": 250, "Jennifer": 5000}
 
     def create_genesis_block(self) -> Block:
         return Block(0, [], "0", 100)

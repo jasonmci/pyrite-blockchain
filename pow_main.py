@@ -9,7 +9,7 @@ def test_tampering(blockchain: Blockchain):
     # Tamper with a transaction in Block 1
     original_transaction = blockchain.chain[1].transactions[0]
     print(f"\nOriginal transaction in Block 1: {original_transaction}")
-    tampered_transaction = "Alice sends 50 coins to Bob"
+    tampered_transaction = "Alexandra sends 50 coins to Benjamin"
     blockchain.chain[1].transactions[0] = tampered_transaction
     print(f"Tampered transaction in Block 1: {tampered_transaction}")
 
@@ -36,7 +36,7 @@ def main():
     blockchain = Blockchain()
 
     # Add some transactions and mine a new block
-    transactions = ["Alice sends 10 coins to Bob", "Bob sends 5 coins to Carol"]
+    transactions = ["Alexandra sends 10 coins to Benjamin", "Benjamin sends 5 coins to Caroline"]
     new_block = blockchain.mine_block(transactions, 10)
     if new_block:
         blockchain.add_block(new_block)
@@ -45,7 +45,7 @@ def main():
         print("Failed to mine Block 1")
 
     # Add more transactions and mine another block
-    transactions = ["Carol sends 2 coins to Dave", "Dave sends 1 coin to Alice"]
+    transactions = ["Caroline sends 2 coins to Dave", "Dave sends 1 coin to Alexandra"]
     new_block = blockchain.mine_block(transactions, 10)
     if new_block:
         blockchain.add_block(new_block)
@@ -54,8 +54,8 @@ def main():
         print("Failed to mine Block 2")
 
 
-    # Create an escrow contract between Alice and Bob
-    escrow = EscrowContract("Alice", "Bob", 10)
+    # Create an escrow contract between Alexandra and Benjamin
+    escrow = EscrowContract("Alexandra", "Benjamin", 10)
     print(f"\nCreated escrow contract: {escrow}")
 
     # Add the escrow contract to a new block and mine it
@@ -67,7 +67,7 @@ def main():
     else:
         print("Failed to mine Block 3")
         
-    # Simulate the release of escrow funds when Alice confirms the receipt of goods
+    # Simulate the release of escrow funds when Alexandra confirms the receipt of goods
     release_transaction = escrow.release()
     print(f"\n{release_transaction}")
 
