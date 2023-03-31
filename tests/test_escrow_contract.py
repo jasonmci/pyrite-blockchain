@@ -1,5 +1,5 @@
 # test_escrow_contract.py
-from escrow_contract import EscrowContract
+from pyrite.escrow_contract import EscrowContract
 
 def test_escrow_contract_creation():
     escrow = EscrowContract("Alexandra", "Benjamin", 10)

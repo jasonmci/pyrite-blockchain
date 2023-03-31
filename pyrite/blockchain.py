@@ -3,7 +3,7 @@ import time
 from hashlib import sha256
 import random
 from typing import List, Any
-from block import Block
+from pyrite.block import Block
 
 class Blockchain:
     def __init__(self):

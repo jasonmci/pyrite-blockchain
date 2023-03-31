@@ -1,7 +1,7 @@
 from typing import List, Any
-from block import Block
-from blockchain import Blockchain
-from escrow_contract import EscrowContract
+from pyrite.block import Block
+from pyrite.blockchain import Blockchain
+from pyrite.escrow_contract import EscrowContract
 
 def test_tampering(blockchain: Blockchain):
     print("\nTampering with transactions test:")

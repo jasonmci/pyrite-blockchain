@@ -1,6 +1,6 @@
 # test_block.py
 import time
-from block import Block
+from pyrite.block import Block
 
 def test_block_creation():
     block = Block(0, [], "0000000000000000000000000000000000000000000000000000000000000000", "Alice")

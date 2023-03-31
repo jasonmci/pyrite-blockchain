@@ -1,7 +1,7 @@
 # test_blockchain.py
 import pytest
-from blockchain import Blockchain
-from block import Block
+from pyrite.blockchain import Blockchain
+from pyrite.block import Block
 
 def test_blockchain_creation():
     blockchain = Blockchain()
