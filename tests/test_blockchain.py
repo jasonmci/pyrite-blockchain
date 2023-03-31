@@ -19,24 +19,24 @@ def test_blockchain_genesis_block():
 
 def test_blockchain_is_valid_block_valid():
     blockchain = Blockchain()
-    block = Block(1, ["Alice sends 10 coins to Bob"], blockchain.chain[0].compute_hash(), "Alice")
+    block = Block(1, ["Andy sends 10 coins to Bradley"], blockchain.chain[0].compute_hash(), "Alice")
     assert blockchain.is_valid_block(block) == True
 
 def test_blockchain_is_valid_block_invalid_previous_hash():
     blockchain = Blockchain()
-    block = Block(1, ["Alice sends 10 coins to Bob"], "invalid_previous_hash", "Alice")
+    block = Block(1, ["Andy sends 10 coins to Bradley"], "invalid_previous_hash", "Alice")
     assert blockchain.is_valid_block(block) == False
 
 def test_blockchain_mine_block():
     blockchain = Blockchain()
-    transactions = ["Alice sends 10 coins to Bob"]
+    transactions = ["Andy sends 10 coins to Bradley"]
     new_block = blockchain.mine_block(transactions)
     assert isinstance(new_block, Block)
     assert new_block.transactions == transactions
 
 def test_blockchain_add_block():
     blockchain = Blockchain()
-    transactions = ["Alice sends 10 coins to Bob"]
+    transactions = ["Andy sends 10 coins to Bradley"]
     new_block = blockchain.mine_block(transactions)
     blockchain.add_block(new_block)
     assert len(blockchain.chain) == 2
