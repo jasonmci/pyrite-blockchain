@@ -17,7 +17,7 @@ python pos_main.py
 ```
 
 The first one uses proof of work and includes retries if it does not solve the puzzle the first time. 
-The second one use proof of stake. Its success rate varies depending upon successfull verification of proof, which is fine for this sample. 
+The second one use proof of stake. Its success rate varies depending upon successful verification of proof, which is fine for this sample. 
 
 ## Running tests
 
